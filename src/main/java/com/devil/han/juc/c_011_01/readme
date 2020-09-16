@@ -5,10 +5,24 @@ JDK早期的 重量级 - OS
     我就是厕所所长 （一 二）
 
 sync (Object)
-markword 记录这个线程ID （偏向锁）
+markWord 记录这个线程ID （偏向锁）
 如果线程争用：升级为 自旋锁
 10次以后，
 升级为重量级锁 - OS
 
 执行时间短（加锁代码），线程数少，用自旋
 执行时间长，线程数多，用系统锁
+
+线程的概念
+启动方式
+常用的方法
+synchronized(Object)
+    --不能用String常量 Integer Long
+    --"object"
+线程同步
+  -synchronized
+    锁的是对象不是代码
+    this  xx.class
+    锁定方法 非锁定方法  同时执行
+    锁升级
+        --偏向锁  自旋锁  重量级锁

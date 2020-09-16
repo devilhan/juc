@@ -17,9 +17,10 @@ public class T01_WhatIsThread {
         }
     }
 
+    /* 一个程序中拥有不同的执行路径是多条线程  */
     public static void main(String[] args) {
-        //new T1().run();
-        new T1().start();
+//        new T1().run();  //先执行run方法
+        new T1().start();  //运行main方法，与此同时运行run方法
         for(int i=0; i<10; i++) {
             try {
                 TimeUnit.MICROSECONDS.sleep(1);

@@ -16,13 +16,13 @@ public class T02_HowToCreateThread {
     }
 
     public static void main(String[] args) {
-        new MyThread().start();
-        new Thread(new MyRun()).start();
-        new Thread(()->{
+        new MyThread().start(); //继承thread类
+        new Thread(new MyRun()).start(); //实现Runnable接口
+        new Thread(()->{            //使用Lambda方法
             System.out.println("Hello Lambda!");
         }).start();
     }
 
 }
 
-//请你告诉我启动线程的三种方式 1：Thread 2: Runnable 3:Executors.newCachedThrad
+//请你告诉我启动线程的三种方式 1：Thread 2: Runnable 3:Executors.newCachedThread (通过线程池来启动)

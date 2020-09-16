@@ -1,6 +1,7 @@
 /**
- * ����һ�������������
- * @author mashibing
+ * synchronized关键字
+ * 对某个对象加锁
+ * @Author Han
  */
 
 package com.devil.han.juc.c_005;

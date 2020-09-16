@@ -1,6 +1,6 @@
 /**
- * ͬ���ͷ�ͬ�������Ƿ����ͬʱ���ã�
- * @author mashibing
+ * 同步和非同步方法是否可以同时调用？
+ * @Author Han
  */
 
 package com.devil.han.juc.c_007;
@@ -36,7 +36,7 @@ public class T {
 		new Thread(t::m2, "t2").start();
 		
 		/*
-		//1.8֮ǰ��д��
+		//1.8之前的写法
 		new Thread(new Runnable() {
 
 			@Override

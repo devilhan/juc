@@ -1,6 +1,5 @@
 /**
- * synchronized关键字
- * 对某个对象加锁
+ * 分析一下这个程序的输出
  * @Author Han
  */
 
@@ -8,9 +7,9 @@ package com.devil.han.juc.c_005;
 
 public class T implements Runnable {
 
-	private /*volatile*/ int count = 100;
+	private/* volatile */int count = 100;
 	
-	public /*synchronized*/ void run() { 
+	public synchronized void run() {
 		count--;
 		System.out.println(Thread.currentThread().getName() + " count = " + count);
 	}

@@ -1,6 +1,6 @@
 /**
- * �Ա�����һ��С���򣬷���һ�������������
- * @author mashibing
+ * 对比上面一个小程序，分析一下这个程序的输出
+ * @Author Han
  */
 
 package com.devil.han.juc.c_006;

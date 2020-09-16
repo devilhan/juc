@@ -1,11 +1,12 @@
 /**
- * �����⣺ģ�������˻�
- * ��ҵ��д��������
- * ��ҵ�������������
- * �����в��У�
+ * 面试题：模拟银行账户
+ * 对业务写方法加锁
+ * 对业务读方法不加锁
+ * 这样行不行？
  *
- * ���ײ���������⣨dirtyRead��
+ * 容易产生脏读问题（dirtyRead）
  */
+
 
 package com.devil.han.juc.c_008;
 
@@ -28,7 +29,7 @@ public class Account {
 		this.balance = balance;
 	}
 	
-	public /*synchronized*/ double getBalance(String name) {
+	public synchronized double getBalance(String name) {
 		return this.balance;
 	}
 	

@@ -1,8 +1,9 @@
 /**
- * һ��ͬ���������Ե�������һ��ͬ��������һ���߳��Ѿ�ӵ��ĳ������������ٴ������ʱ����Ȼ��õ��ö������.
- * Ҳ����˵synchronized��õ����ǿ������
- * @author mashibing
+ * 一个同步方法可以调用另外一个同步方法，一个线程已经拥有某个对象的锁，再次申请的时候仍然会得到该对象的锁.
+ * 也就是说synchronized获得的锁是可重入的
+ * @Author Han
  */
+
 package com.devil.han.juc.c_009;
 
 import java.util.concurrent.TimeUnit;

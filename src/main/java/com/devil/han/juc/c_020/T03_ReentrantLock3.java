@@ -1,14 +1,14 @@
 /**
- * reentrantlock�������synchronized
- * ����m1����this,ֻ��m1ִ����ϵ�ʱ��,m2����ִ��
- * �����Ǹ�ϰsynchronized��ԭʼ������
- * 
- * ʹ��reentrantlock�������ͬ���Ĺ���
- * ��Ҫע����ǣ�����Ҫ����Ҫ����Ҫ�ֶ��ͷ�������Ҫ������˵���飩
- * ʹ��syn�����Ļ���������쳣��jvm���Զ��ͷ���������lock�����ֶ��ͷ�������˾�����finally�н��������ͷ�
- * 
- * ʹ��reentrantlock���Խ��С�����������tryLock�������޷�������������ָ��ʱ�����޷��������߳̿��Ծ����Ƿ�����ȴ�
- * @author mashibing
+ * reentrantLock用于替代synchronized
+ * 由于m1锁定this,只有m1执行完毕的时候,m2才能执行
+ * 这里是复习synchronized最原始的语义
+ *
+ * 使用reentrantLock可以完成同样的功能
+ * 需要注意的是，必须要必须要必须要手动释放锁（重要的事情说三遍）
+ * 使用syn锁定的话如果遇到异常，jvm会自动释放锁，但是lock必须手动释放锁，因此经常在finally中进行锁的释放
+ *
+ * 使用reentrantLock可以进行“尝试锁定”tryLock，这样无法锁定，或者在指定时间内无法锁定，线程可以决定是否继续等待
+ * @Author Han
  */
 package com.devil.han.juc.c_020;
 
@@ -22,7 +22,7 @@ public class T03_ReentrantLock3 {
 	void m1() {
 		try {
 			lock.lock();
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i < 4; i++) {
 				TimeUnit.SECONDS.sleep(1);
 
 				System.out.println(i);
@@ -35,9 +35,9 @@ public class T03_ReentrantLock3 {
 	}
 
 	/**
-	 * ʹ��tryLock���г�������������������񣬷�����������ִ��
-	 * ���Ը���tryLock�ķ���ֵ���ж��Ƿ�����
-	 * Ҳ����ָ��tryLock��ʱ�䣬����tryLock(time)�׳��쳣������Ҫע��unclock�Ĵ�������ŵ�finally��
+	 * 使用tryLock进行尝试锁定，不管锁定与否，方法都将继续执行
+	 * 可以根据tryLock的返回值来判定是否锁定
+	 * 也可以指定tryLock的时间，由于tryLock(time)抛出异常，所以要注意unclock的处理，必须放到finally中
 	 */
 	void m2() {
 		/*

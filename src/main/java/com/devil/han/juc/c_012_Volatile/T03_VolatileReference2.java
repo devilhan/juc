@@ -3,7 +3,7 @@
  */
 package com.devil.han.juc.c_012_Volatile;
 
-public class T03________VolatileReference2 {
+public class T03_VolatileReference2 {
 
     private static class Data {
         int a, b;

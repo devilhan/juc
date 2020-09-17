@@ -1,0 +1,27 @@
+volatile
+    保证线程可见性
+      - MESI
+      - 缓存一致性协议
+    禁止指令重排序
+     - DCL单例
+     - Double Check Lock
+     - Mgr06.java
+
+
+CAS(无锁优化|乐观锁  自旋)  --Compare and Set/Swap
+    AtomicXX
+        使用Unsafe类，可以直接管理JVM 中对象
+         方法： allocateMemory | freeMemory
+
+         等同于 C: malloc free
+               C++ : new delete
+    cas(V,Excepted,newValue)   --CPU原语支持
+
+        if V == E
+        V = new
+        otherwise try again or fail
+
+        ABA问题
+            加version
+            如果基础类型无所谓，如果是引用类型 你的女朋友跟你复合，中间经历了别的女人
+

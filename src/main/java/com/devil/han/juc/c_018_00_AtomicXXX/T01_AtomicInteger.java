@@ -1,7 +1,7 @@
 /**
- * ���ͬ��������ĸ���Ч�ķ�����ʹ��AtomXXX��
- * AtomXXX�౾��������ԭ���Եģ������ܱ�֤�����������������ԭ���Ե�
- * @author mashibing
+ * 解决同样的问题的更高效的方法，使用AtomXXX类
+ * AtomXXX类本身方法都是原子性的，但不能保证多个方法连续调用是原子性的
+ * @Author Han
  */
 package com.devil.han.juc.c_018_00_AtomicXXX;
 

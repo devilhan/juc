@@ -3,6 +3,9 @@ package com.devil.han.juc.c_018_01_Unsafe;
 //import sun.misc.*;
 
 import sun.misc.Unsafe;
+/**
+ * 直接操纵jvm 中的对象
+ */
 
 public class HelloUnsafe {
     static class M {

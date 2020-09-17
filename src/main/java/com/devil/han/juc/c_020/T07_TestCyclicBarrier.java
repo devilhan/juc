@@ -5,14 +5,14 @@ import java.util.concurrent.CyclicBarrier;
 
 public class T07_TestCyclicBarrier {
     public static void main(String[] args) {
-        //CyclicBarrier barrier = new CyclicBarrier(20);
+        //CyclicBarrier arrier = new CyclicBarrier(20);
 
-        CyclicBarrier barrier = new CyclicBarrier(20, () -> System.out.println(""));
+        CyclicBarrier barrier = new CyclicBarrier(20, () -> System.out.println("满人"));
 
         /*CyclicBarrier barrier = new CyclicBarrier(20, new Runnable() {
             @Override
             public void run() {
-                System.out.println("*");
+                System.out.println("满人，发车");
             }
         });*/
 

@@ -7,3 +7,9 @@ tryLock
 lockInterruptibly
 公平锁与非公平锁切换
 
+countDownLatch  latch.countdown()   latch.await()
+join()
+CyclicBarrier  -- 栅栏 限流 (GUAVA RateLimiter)
+
+
+

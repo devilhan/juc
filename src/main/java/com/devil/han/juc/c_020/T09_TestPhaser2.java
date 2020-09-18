@@ -26,8 +26,8 @@ public class T09_TestPhaser2 {
             new Thread(new Person("p" + i)).start();
         }
 
-        new Thread(new Person("����")).start();
-        new Thread(new Person("����")).start();
+        new Thread(new Person("新郎")).start();
+        new Thread(new Person("新娘")).start();
 
     }
 

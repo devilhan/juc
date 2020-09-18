@@ -24,7 +24,7 @@ public class T01_WithoutVolatile {
 	public int size() {
 		return lists.size();
 	}
-	
+
 	public static void main(String[] args) {
 		T01_WithoutVolatile c = new T01_WithoutVolatile();
 
@@ -43,11 +43,12 @@ public class T01_WithoutVolatile {
 		
 		new Thread(() -> {
 			while(true) {
+//				System.out.println("size is "+c.size());
 				if(c.size() == 5) {
 					break;
 				}
 			}
-			System.out.println("t2 ����");
+			System.out.println("t2 结束");
 		}, "t2").start();
 	}
 }

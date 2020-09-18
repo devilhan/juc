@@ -47,10 +47,10 @@ public class T10_TestReadWriteLock {
 
 
     public static void main(String[] args) {
-        //Runnable readR = ()-> read(lock);
+//        Runnable readR = ()-> read(lock);
         Runnable readR = ()-> read(readLock);
 
-        //Runnable writeR = ()->write(lock, new Random().nextInt());
+//        Runnable writeR = ()->write(lock, new Random().nextInt());
         Runnable writeR = ()->write(writeLock, new Random().nextInt());
 
         for(int i=0; i<18; i++) new Thread(readR).start();

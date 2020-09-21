@@ -25,7 +25,6 @@ import java.util.concurrent.TimeUnit;
 
 public class T04_NotifyFreeLock {
 
-
 	//添加volatile，使t2能够得到通知
 	volatile List lists = new ArrayList();
 

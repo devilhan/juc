@@ -25,5 +25,6 @@ public class Main {
         for (Thread t : threads) t.join();
 
         System.out.println(m);
+
     }
 }
